@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Experience Bulletizer </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="bg-gray-100">
+    <header class="bg-gray-700 py-4 px-8 flex justify-between items-center">
+      <div>
+        <h1 class="text-gray-200 text-lg font-semibold">Bulletizer</h1>
+      </div>
+      <div>
+        <a href="#" class="text-gray-200">Log in</a>
+      </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto mt-10 p-4 flex-col content-center justify-between">
+<!--      input box for job description-->
+      <div class="flex content-center justify-between">
+        <div class="flex flex-col justify-center mb-4">
+           <label for="message" class="text-lg font-semibold mb-2 text-gray-500">Job Description</label>
+           <textarea id="job-description" rows="6" class="w-80 h-52 p-2 border border-gray-300 shadow-md rounded mb-2 focus:ring-blue-500" placeholder="Past the text / Upload the file"></textarea>
+           <div class="flex content-center justify-center">
+             <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold p-2 rounded mr-2">Upload</button>
+             <button class="bg-gray-700 hover:bg-yellow-600 text-white font-semibold p-2 rounded">Clear</button>
+           </div>
+        </div>
+<!--        input box for work experience-->
+        <div class="flex flex-col justify-center mb-4">
+           <label for="message" class="text-lg font-semibold mb-2 text-gray-500">Work Experience</label>
+           <textarea id="work-experience" rows="6" class="w-80 h-52 p-2 border border-gray-300 shadow-md rounded mb-4 focus:ring-blue-500" placeholder="Past the text / Upload the file"></textarea>
+            <div class="flex content-center justify-center">
+             <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold p-2 rounded mr-2">Upload</button>
+             <button class="bg-gray-700 hover:bg-yellow-600 text-white font-semibold p-2 rounded">Clear</button>
+           </div>
+        </div>
+      </div>
+
+<!--      Response from Vertex AI-->
+      <div class="mt-8">
+        <button id='ai-generate' class="text-xl font-semibold mb-4 bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded">Generate Bullet Points</button>
+        <textarea id="ai-response" rows="8" class="bg-white p-4 h-36 w-full border border-gray-300 rounded"></textarea>
+      </div>
+  </main>
+
+    <footer class="bg-gray-700 py-4 px-8 text-gray-200 text-sm flex justify-between items-center">
+      <div>
+        <p>Bulletizer &copy; 2023. All rights reserved.</p>
+      </div>
+      <div>
+        <p>Contact: info@bulletizer.com</p>
+      </div>
+      <div>
+        <p>License: MIT</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
